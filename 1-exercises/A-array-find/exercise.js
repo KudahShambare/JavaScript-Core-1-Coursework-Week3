@@ -4,7 +4,6 @@
 */
 
 // write your code here
-
 var names = [
   "Rakesh",
   "Antonio",
