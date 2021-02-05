@@ -6,8 +6,19 @@
 
   An array with numbers 1-15 has been provided.
 */
+function printNumbers(arr){
+ return arr.forEach((elem)=>{
+  if(elem%3===0 && elem%5===0) console.log("FizzBuzz");
+  else if (elem%3===0) console.log("Fizz");
+  else if (elem%5===0) console.log("Buzz");
+  else console.log(elem)
+})
+}
+
+
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+printNumbers(arr);
 
 /* EXPECTED OUTPUT */
 
