@@ -23,6 +23,7 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
+  return 
 
 }
 
