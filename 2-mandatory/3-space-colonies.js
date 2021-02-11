@@ -15,7 +15,11 @@
   
 */
 
-function colonisers() {}
+function colonisers(arr) {
+  return arr.filter((elem)=>{
+    return elem.includes("family") && elem.charAt(0)==="A"
+  })
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

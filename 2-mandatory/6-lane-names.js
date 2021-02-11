@@ -7,9 +7,9 @@
 */
 
 function getLanes(arr) {
-  return arr.filter((elem)=>{
-    return elem.includes("Lane")
-  })
+  return arr.filter((elem) => {
+    return elem.includes("Lane");
+  });
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

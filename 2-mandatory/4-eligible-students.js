@@ -8,13 +8,9 @@
 */
 
 function eligibleStudents(arr) {
-  let eligible = [];
-  return arr.filter((elem) => {
-    if (elem[1] > 7) {
-      elem.pop();
-      return eligible.push(elem.flat());
-    }
-  });
+  let enoughAttendances= arr.filter((elem)=>{return elem[1]>7});
+  return enoughAttendances.map((val)=>{return val[0]})
+
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
