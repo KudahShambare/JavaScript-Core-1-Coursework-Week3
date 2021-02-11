@@ -8,8 +8,8 @@
 
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
-var pairsByIndex=pairsByIndexRaw.filter((arr)=>{
-  return Array.isArray(arr) && arr.length===2;
+var pairsByIndex = pairsByIndexRaw.filter((rawPairElement) => {
+  return Array.isArray(rawPairElement) && rawPairElement.length === 2;
 }); // Complete this statement
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];

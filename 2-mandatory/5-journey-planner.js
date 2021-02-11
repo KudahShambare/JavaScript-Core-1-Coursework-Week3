@@ -102,8 +102,9 @@ function getLocationName(arr) {
 
 /*
  We arrived at the final method. it won't take long if you use the previously implemented functions wisely.
- 
- Finish up the implemention of the function journeyPlanner that
+
+ Finish up the implementation of the function journeyPlanner that
+
   - Accepts two parameters:
     1) An array with a list of locations' and their transports
        e.g:
@@ -111,11 +112,15 @@ function getLocationName(arr) {
          ["Angel", "tube", "bus"],
          ["London Bridge", "tube", "river boat"]
        ]
+
     2) A string containing a transport mode
        e.g: "bus"
+
   - Returns an array of where I can go if I only want to use a specific mode of transport.
-    NOTE: only the location names should be returned, not the name of transports.
-  Hint:
+
+  NOTE: only the location names should be returned, not the name of transports.
+  
+  HINTS:
    - Use the function you implemented above.
    - Use array method to remove locations that is not accessible by the given transportMode.
    - Use array method to manipulate its elements.

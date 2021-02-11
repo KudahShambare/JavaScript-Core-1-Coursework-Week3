@@ -14,6 +14,8 @@ To be valid, a password must:
 
 Passwords must not be any previous password in the passwords array. 
 
+We have supplied functions which will help you with some of these checks.
+
 Example 1:
 PreviousPassword = ["fhD8!yrjj", "ttkTu.wer3", "dvyyeyY!5", "qwbfj76%", "tytT3729."];
 
@@ -23,8 +25,40 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
-  return 
+    let upperCases = /[A-Z]/g;
+    let lowerCases = /[a-z]/g;
+    let numbers = /[0-9]/g;
+    let characters = /["!", "#", "$", "%", ".", "*", "&"]/g;
+    return passwords.map((elem) => {
+      return (
+        numbers.test(elem) &&
+        upperCases.test(elem) &&
+        elem.length > 4 &&
+        lowerCases.test(elem) &&
+        characters.test(elem) &&
+        passwords.includes(elem)
+      );
+    });
+}
 
+// Returns true if string contains at least one uppercase letter.
+function containsUppercaseLetter(string) {
+    return /[A-Z]/.test(string);
+}
+
+// Returns true if string contains at least one lowercase letter.
+function containsLowercaseLetter(string) {
+    return /[a-z]/.test(string);
+}
+
+// Returns true if string contains at least one number.
+function containsNumber(string) {
+    return /[0-9]/.test(string);
+}
+
+// Returns true if string contains at least one symbol.
+function containsSymbol(string) {
+    return /[!#$%.*&]/.test(string);
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

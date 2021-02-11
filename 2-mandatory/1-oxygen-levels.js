@@ -9,21 +9,7 @@
     Write a function that finds the oxygen level of the first safe planet - Oxygen between 19.5% and 23.5%
 
     Some string methods that might help you here are .replace() and .substring(). 
-
-    Let's look at a quick example before trying the exercise.
 */
-
-/* .replace() allows us to add something where we removed something*/
-let greeting = "Good Morning";
-greeting.replace("Morning", "Evening"); // returns Good Evening
-
-/* .substring() allows us to remove things from strings */
-let dessert = "ice cream and pancakes";
-let newDessert = dessert.substring(0, 9);
-console.log(newDessert); // outputs ice cream
-
-/* + + + + + + + */
-/* Now try the exercise */
 
 function safeLevels() {}
 
