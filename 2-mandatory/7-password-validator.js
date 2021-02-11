@@ -11,9 +11,8 @@ To be valid, a password must:
 - Have at least one English lowercase letter (a-z)
 - Have at least one number (0-9)
 - Have at least one non-alphanumeric symbol ("!", "#", "$", "%", ".", "*", "&")
-Passwords must not be any previous password in the passwords array. 
 
-We have supplied functions which will help you with some of these checks.
+Passwords must not be any previous password in the passwords array. 
 
 Example 1:
 PreviousPassword = ["fhD8!yrjj", "ttkTu.wer3", "dvyyeyY!5", "qwbfj76%", "tytT3729."];
@@ -23,41 +22,18 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
+
 function validatePasswords(passwords) {
-    let upperCases = /[A-Z]/g;
-    let lowerCases = /[a-z]/g;
-    let numbers = /[0-9]/g;
-    let characters = /["!", "#", "$", "%", ".", "*", "&"]/g;
-    return passwords.map((elem) => {
-      return (
-        numbers.test(elem) &&
-        upperCases.test(elem) &&
-        elem.length > 4 &&
-        lowerCases.test(elem) &&
-        characters.test(elem) &&
-        passwords.includes(elem)
-      );
-    });
-}
+  let upperCases=/[A-Z]/g;
+  let lowerCases=/[a-z]/g;
+  let numbers=/[0-9]/g;
+  let characters = /["!", "#", "$", "%", ".", "*", "&"]/g;
 
-// Returns true if string contains at least one uppercase letter.
-function containsUppercaseLetter(string) {
-    return /[A-Z]/.test(string);
-}
+  return passwords.map((elem)=>{
+    return numbers.test(elem) && upperCases.test(elem) && elem.length>4 && lowerCases.test(elem) && characters.test(elem)  && passwords.includes(elem)
+  })
 
-// Returns true if string contains at least one lowercase letter.
-function containsLowercaseLetter(string) {
-    return /[a-z]/.test(string);
-}
 
-// Returns true if string contains at least one number.
-function containsNumber(string) {
-    return /[0-9]/.test(string);
-}
-
-// Returns true if string contains at least one symbol.
-function containsSymbol(string) {
-    return /[!#$%.*&]/.test(string);
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
